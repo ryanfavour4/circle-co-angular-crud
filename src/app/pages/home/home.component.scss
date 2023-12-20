@@ -1,0 +1,10 @@
+@use "../../../styles.scss" as *;
+
+.home-page {
+  background: $primary-color;
+}
+
+.faAddressCard {
+  color: $primary-color;
+  font-size: 2rem;
+}

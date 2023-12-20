@@ -1,1 +1,131 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+$primary-color: #0cbbc7;
+$primary-color-fade: #edfeff;
+$white: #ffffff;
+$black: #000000;
+$body-text: #676767;
+$pink-1: #fff5f3;
+$pink-2: #fff0f9;
+$pink-3: #ffede4;
+$teal: #ecffff;
+$peach: #fff9e7;
+$pale-lavender: #f6f4ff;
+$light: #f7f7f7;
+
+* {
+  margin: 0;
+  padding: 0;
+  transition: all 0.1s ease-in-out;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+*::-webkit-scrollbar {
+  width: 9px;
+  background-color: rgba($light, 1);
+  height: 9px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgba($primary-color-fade, 1);
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: rgba($primary-color, 1);
+}
+
+html {
+  overflow-x: hidden;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  width: 100%;
+  overflow: hidden;
+  font-size: 18px;
+  background: $white;
+  color: $black;
+}
+
+input,
+select,
+textarea {
+  outline: 0;
+  border: 1px solid $body-text;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  box-shadow: 0px 0px 2px 2px rgb($primary-color, 0.3),
+    0px 0px 2px 4px rgb($primary-color-fade, 0.4),
+    0px 0px 2px 4px rgb($primary-color-fade, 0.3);
+}
+
+a {
+  text-decoration: none;
+}
+
+// ********************************** //
+// **** CUSTOM REUSABLE CLASSES **** //
+// ********************************** //
+.breaker {
+  word-wrap: break-word;
+  word-break: break-all;
+  hyphenate-limit-chars: 8 2;
+  hyphens: auto;
+  line-break: strict;
+  overflow-wrap: break-word;
+  white-space: break-spaces;
+  hanging-punctuation: first;
+  line-clamp: 3;
+  text-overflow: ellipsis;
+}
+
+.wrapper {
+  width: 98%;
+  max-width: 1350px;
+  margin: auto;
+  height: 100%;
+}
+
+.shadow-text {
+  text-shadow: 2px 2px 4px rgba($black, 0.7);
+}
+
+.text-stroke {
+  -webkit-text-stroke: 1px $body-text;
+}
+
+.ellipsisText {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.ellipsisText::after {
+  content: "...";
+  font-size: smaller;
+  color: $body-text;
+}
+
+// ************************ //
+// **** MEDIA QUERIES **** //
+// ************************ //
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 16px;
+  }
+}
