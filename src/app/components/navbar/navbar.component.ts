@@ -1,11 +1,23 @@
 import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { ButtonComponent } from '../button/button.component';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [RouterLink, RouterLinkActive],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss',
+  imports: [RouterLink, RouterLinkActive, ButtonComponent],
 })
-export class NavbarComponent {}
+export class NavbarComponent {
+  navOpen = false;
+  e: any;
+
+  toggleNav() {
+    this.navOpen = !this.navOpen;
+  }
+
+  overlayClicked(event: MouseEvent) {
+    event.stopPropagation();
+  }
+}

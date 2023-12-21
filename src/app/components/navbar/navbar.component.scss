@@ -1,0 +1,151 @@
+@use "../../../styles.scss" as *;
+
+.navbar {
+  background: $white;
+  position: relative;
+}
+
+.mobile-slide-nav {
+  position: fixed;
+  background: rgba($black, 0.5);
+  backdrop-filter: blur(2px);
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  clip-path: circle(0% at 0 0);
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+
+  > .mobile-slide-nav-dark-overlay {
+    border-left: 5px solid $primary-color;
+    background: $white;
+    padding-block: 0.5rem;
+    padding-inline: 1rem;
+    width: 80%;
+    max-width: 350px;
+    height: 100%;
+    cursor: auto;
+
+    .circle-mobile-nav {
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      img {
+        width: 8rem;
+      }
+
+      .close {
+        width: 1.8rem;
+        border-radius: 0.4rem;
+        padding: 0.3rem;
+        cursor: pointer;
+
+        &:hover {
+          background: $primary-color-fade;
+        }
+      }
+    }
+  }
+}
+
+.mobile-slide-nav-open {
+  clip-path: circle(141.4% at 0 0) !important;
+  visibility: visible !important;
+  transition: all 0.3s ease-in-out !important;
+}
+
+.mobile-slide-nav-ul-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  margin-bottom: 2rem;
+
+  a {
+    display: block;
+    padding-block: 0.4rem;
+    padding-inline: 0.3rem;
+    color: $primary-color;
+    &:hover {
+      border: 2px solid $primary-color;
+    }
+  }
+}
+
+.desktop-nav-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .menu-icon {
+    width: 2.5rem;
+    cursor: pointer;
+  }
+
+  nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-block: 0.5rem;
+  }
+
+  .logo {
+    width: 9rem;
+    flex: 1;
+  }
+
+  ul {
+    display: none;
+  }
+}
+
+/* ----------- Tablets and Higher ----------- */
+/* Portrait and Landscape */
+@media only screen and (min-width: 800px) {
+  .navbar {
+    padding-block: 0.6rem;
+  }
+
+  .menu-icon {
+    display: none;
+  }
+
+  .desktop-nav-div {
+    nav {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      .logo {
+        max-width: 140px;
+        margin-block: 0.2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+    }
+
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+
+      a {
+        color: $black;
+      }
+    }
+  }
+
+  .mobile-slide-nav {
+    display: none;
+  }
+}

@@ -52,7 +52,7 @@ body {
   scroll-behavior: smooth;
   width: 100%;
   overflow: hidden;
-  font-size: 18px;
+  font-size: 17px;
   background: $white;
   color: $black;
 }
@@ -74,6 +74,14 @@ textarea:focus {
 
 a {
   text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
 }
 
 // ********************************** //

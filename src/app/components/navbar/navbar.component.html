@@ -1,18 +1,152 @@
-<h1>Angular Router App</h1>
-<nav>
-  <ul>
-    <li>
+<div class="navbar">
+  <div class="wrapper desktop-nav-div">
+    <div (click)="toggleNav()" class="menu-icon">
+      <img src="../../../assets/svg/menu-alt-right.svg" alt="" />
+    </div>
+    <nav>
+      <ul class="">
+        <li>
+          <a
+            routerLink="/features"
+            routerLinkActive="active"
+            ariaCurrentWhenActive="page"
+            >Features</a
+          >
+        </li>
+        <li>
+          <a
+            routerLink="/pricing"
+            routerLinkActive="active"
+            ariaCurrentWhenActive="page"
+            >Pricing</a
+          >
+        </li>
+        <li>
+          <a
+            href="#testimonials"
+            routerLinkActive="active"
+            ariaCurrentWhenActive="page"
+            >Testimonials</a
+          >
+        </li>
+        <li>
+          <a
+            routerLink="/resources"
+            routerLinkActive="active"
+            ariaCurrentWhenActive="page"
+            >Resources</a
+          >
+        </li>
+      </ul>
+
       <a
-        routerLink="/contact"
+        routerLink="/"
         routerLinkActive="active"
         ariaCurrentWhenActive="page"
-        >First Component</a
+        class="logo"
       >
-    </li>
-    <li>
-      <a routerLink="" routerLinkActive="active" ariaCurrentWhenActive="page"
-        >Second Component</a
-      >
-    </li>
-  </ul>
-</nav>
+        <img src="../../../assets/icons/circle-logo.png" alt="circle-logo" />
+      </a>
+
+      <ul>
+        <li>
+          <a
+            routerLink="/company"
+            routerLinkActive="active"
+            ariaCurrentWhenActive="page"
+            >Company</a
+          >
+        </li>
+        <li>
+          <a
+            routerLink="/contact"
+            routerLinkActive="active"
+            ariaCurrentWhenActive="page"
+            >Contact</a
+          >
+        </li>
+        <li>
+          <app-button buttonText="Login" buttonType="secondary"></app-button>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!-- Mobile Overlay Sliding Nav -->
+  <nav
+    (click)="toggleNav()"
+    [class]="navOpen ? 'mobile-slide-nav-open' : ''"
+    class="mobile-slide-nav"
+  >
+    <div (click)="overlayClicked($event)" class="mobile-slide-nav-dark-overlay">
+      <div class="circle-mobile-nav">
+        <a (click)="toggleNav()" routerLink="/">
+          <img
+            src="../../../assets/icons/circle-logo.png"
+            class=""
+            alt="circle-logo"
+          />
+        </a>
+        <img
+          (click)="toggleNav()"
+          src="../../../assets/svg/close.svg"
+          class="close"
+          alt="close"
+        />
+      </div>
+      <ul (click)="toggleNav()" class="mobile-slide-nav-ul-links">
+        <li>
+          <a
+            routerLink="/features"
+            routerLinkActive="active"
+            ariaCurrentWhenActive="page"
+            >Features</a
+          >
+        </li>
+        <li>
+          <a
+            routerLink="/pricing"
+            routerLinkActive="active"
+            ariaCurrentWhenActive="page"
+            >Pricing</a
+          >
+        </li>
+        <li>
+          <a
+            href="#testimonials"
+            routerLinkActive="active"
+            ariaCurrentWhenActive="page"
+            >Testimonials</a
+          >
+        </li>
+        <li>
+          <a
+            routerLink="/resources"
+            routerLinkActive="active"
+            ariaCurrentWhenActive="page"
+            >Resources</a
+          >
+        </li>
+        <li>
+          <a
+            routerLink="/company"
+            routerLinkActive="active"
+            ariaCurrentWhenActive="page"
+            >Company</a
+          >
+        </li>
+        <li>
+          <a
+            routerLink="/contact"
+            routerLinkActive="active"
+            ariaCurrentWhenActive="page"
+            >Contact</a
+          >
+        </li>
+      </ul>
+
+      <div class="">
+        <app-button buttonText="Login" buttonType="secondary"></app-button>
+      </div>
+    </div>
+  </nav>
+</div>

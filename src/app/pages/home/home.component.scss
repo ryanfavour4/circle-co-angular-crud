@@ -8,3 +8,10 @@
   color: $primary-color;
   font-size: 2rem;
 }
+
+.circle-dot {
+  fill: red;
+  &:hover {
+    fill: blue;
+  }
+}

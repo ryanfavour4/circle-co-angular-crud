@@ -9,6 +9,14 @@ import { ButtonComponent } from '../../components/button/button.component';
   imports: [ButtonComponent],
 })
 export class HomeComponent {
+  iconFill = 'currentColor'; // Default to current text color
+  primaryColor = '#f07bff'; // Your primary color
+
+  selectIcon() {
+    this.iconFill =
+      this.iconFill == this.primaryColor ? 'currentColor' : this.primaryColor;
+  }
+
   logIt(e: any) {
     console.log(e);
   }
