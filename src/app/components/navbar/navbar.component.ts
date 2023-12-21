@@ -15,6 +15,7 @@ export class NavbarComponent {
 
   toggleNav() {
     this.navOpen = !this.navOpen;
+    console.log(this.navOpen);
   }
 
   overlayClicked(event: MouseEvent) {
