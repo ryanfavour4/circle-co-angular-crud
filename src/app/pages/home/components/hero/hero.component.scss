@@ -1,0 +1,47 @@
+@use "../../../../../styles.scss" as *;
+
+.hero {
+  background: url("../../../../../assets/images/hero-bg.png"),
+    linear-gradient(rgba($primary-color-fade, 1), rgba($primary-color-fade, 1));
+  background-size: cover;
+  padding-block: 2rem;
+  padding-top: 3rem;
+
+  .hero-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+
+    img {
+      margin-top: 4rem;
+      margin-bottom: -16%;
+      max-width: 900px;
+      width: 100%;
+    }
+  }
+}
+
+/* ----------- Tablets and Higher ----------- */
+/* Portrait and Landscape */
+@media only screen and (min-width: 800px) {
+  .hero-wrapper {
+    h2 {
+      font-size: 2.2rem;
+      max-width: 800px;
+      text-wrap: balance;
+    }
+
+    p {
+      max-width: 550px;
+      margin-bottom: 2rem;
+    }
+
+    img {
+      margin-top: 0rem;
+      margin-bottom: -17% !important;
+    }
+  }
+}
