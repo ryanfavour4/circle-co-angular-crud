@@ -73,10 +73,11 @@
   </div>
   <!-- Mobile Overlay Sliding Nav -->
   <nav
+    (click)="toggleNav()"
     [class]="navOpen ? 'mobile-slide-nav-open' : ''"
     class="mobile-slide-nav"
   >
-    <div class="mobile-slide-nav-dark-overlay">
+    <div (click)="overlayClicked($event)" class="mobile-slide-nav-dark-overlay">
       <div class="circle-mobile-nav">
         <a (click)="toggleNav()" routerLink="/">
           <img

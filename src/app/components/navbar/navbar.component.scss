@@ -15,6 +15,7 @@
   top: 0;
   left: 0;
   bottom: 0;
+  transition: all 1s linear;
   // display: none;
   clip-path: circle(0% at 0 0);
   visibility: hidden;
@@ -62,6 +63,7 @@
   // display: block;
   clip-path: circle(141.4% at 0 0) !important;
   visibility: visible !important;
+  transition: all 1s linear;
 }
 
 .mobile-slide-nav-ul-links {
