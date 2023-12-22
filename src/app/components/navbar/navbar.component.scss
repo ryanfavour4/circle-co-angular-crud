@@ -15,10 +15,11 @@
   left: 0;
   bottom: 0;
   right: 0;
-  transition: all 0.5s linear;
   // display: none;
+  // clip-path: circle(0% at 0 0);
   visibility: hidden;
-  clip-path: circle(0% at 0 0);
+  transform: translateX(-100%);
+  transition: all 0.2s linear;
 
   > .mobile-slide-nav-dark-overlay {
     border-left: 5px solid $primary-color;
@@ -62,9 +63,10 @@
 
 .mobile-slide-nav-open {
   // display: block;
-  clip-path: circle(141.4% at 0 0) !important;
+  // clip-path: circle(141.4% at 0 0) !important;
+  transform: translateX(0%);
   visibility: visible !important;
-  transition: all 0.5s linear;
+  transition: all 0.2s linear;
 }
 
 .mobile-slide-nav-ul-links {
