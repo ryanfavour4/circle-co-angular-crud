@@ -2,7 +2,6 @@
 
 .navbar {
   background: $white;
-  position: relative;
 }
 
 .mobile-slide-nav {
@@ -15,10 +14,11 @@
   top: 0;
   left: 0;
   bottom: 0;
-  transition: all 1s linear;
+  right: 0;
+  transition: all 0.5s linear;
   // display: none;
-  clip-path: circle(0% at 0 0);
   visibility: hidden;
+  clip-path: circle(0% at 0 0);
 
   > .mobile-slide-nav-dark-overlay {
     border-left: 5px solid $primary-color;
@@ -41,6 +41,7 @@
         align-items: center;
         justify-content: space-between;
       }
+
       img {
         width: 8rem;
       }
@@ -63,7 +64,7 @@
   // display: block;
   clip-path: circle(141.4% at 0 0) !important;
   visibility: visible !important;
-  transition: all 1s linear;
+  transition: all 0.5s linear;
 }
 
 .mobile-slide-nav-ul-links {
@@ -105,6 +106,7 @@
   .logo {
     width: 9rem;
     flex: 1;
+    margin-left: -40px;
   }
 
   ul {
@@ -136,6 +138,7 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
+        margin-left: unset;
       }
     }
 
