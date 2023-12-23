@@ -1,0 +1,79 @@
+@use "../../../../../styles.scss" as *;
+
+.wrapper-our-customers {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 1.2rem;
+  padding-bottom: 2rem;
+
+  > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2.8rem;
+
+    h3 {
+      font-size: 1.6rem;
+      font-weight: 500;
+    }
+  }
+}
+
+.customers-logos {
+  display: flex;
+  gap: 1rem 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  img {
+    max-width: 130px;
+    object-fit: contain;
+  }
+}
+
+.our-customers-specs {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.8rem;
+
+  > span {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+
+    span {
+      color: $primary-color;
+      font-weight: 600;
+    }
+  }
+}
+
+/* ----------- Tablets and Higher ----------- */
+/* Portrait and Landscape */
+@media only screen and (min-width: 800px) {
+  .wrapper-our-customers {
+    > div {
+      h3 {
+        font-size: 1.9rem;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .customers-logos {
+    gap: 1.5rem 3.5rem;
+    img {
+      width: 130px;
+    }
+  }
+
+  .our-customers-specs {
+    flex-direction: row;
+    gap: 3rem;
+  }
+}

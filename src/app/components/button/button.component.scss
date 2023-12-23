@@ -1,8 +1,7 @@
 @use "../../../styles.scss" as *;
 
 .button {
-  padding: 0.5rem 1rem;
-  // font-family: "Plus Jakarta Sans", sans-serif;
+  padding: 0.7rem 1.4rem;
   background: $primary-color;
   color: $white;
   border: 1px solid $primary-color;
@@ -13,8 +12,8 @@
   gap: 0.5rem;
   min-height: 40.19px;
   min-width: 130px;
-  color: $white;
   cursor: pointer;
+  font-size: 1rem;
 
   &:hover {
     opacity: 0.85;

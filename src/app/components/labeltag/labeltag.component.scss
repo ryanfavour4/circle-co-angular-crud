@@ -1,0 +1,15 @@
+@use "../../../styles.scss" as *;
+
+.label {
+  padding: 0.5rem 1rem;
+  background: $primary-color-fade;
+  color: $primary-color;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 30px;
+  font-size: 0.8rem;
+  min-width: 130px;
+}

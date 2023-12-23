@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
+import { LabeltagComponent } from '../../../../components/labeltag/labeltag.component';
 
 @Component({
   selector: 'app-ourcustomers',
   standalone: true,
-  imports: [],
   templateUrl: './ourcustomers.component.html',
-  styleUrl: './ourcustomers.component.scss'
+  styleUrl: './ourcustomers.component.scss',
+  imports: [LabeltagComponent],
 })
-export class OurcustomersComponent {
-
-}
+export class OurcustomersComponent {}
