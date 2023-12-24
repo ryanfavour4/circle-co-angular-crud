@@ -1,15 +1,19 @@
 import { Component } from '@angular/core';
 import { ButtonComponent } from '../../components/button/button.component';
-import { HeroComponent } from './components/hero/hero.component';
-import { NavbarComponent } from '../../components/navbar/navbar.component';
-import { OurcustomersComponent } from './components/ourcustomers/ourcustomers.component';
-
+import { HeroComponent } from './layouts/hero/hero.component';
+import { OurcustomersComponent } from './layouts/ourcustomers/ourcustomers.component';
+import { OurpromiseComponent } from './layouts/ourpromise/ourpromise.component';
 @Component({
   selector: 'app-home',
   standalone: true,
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
-  imports: [ButtonComponent, HeroComponent, OurcustomersComponent],
+  imports: [
+    ButtonComponent,
+    HeroComponent,
+    OurcustomersComponent,
+    OurpromiseComponent,
+  ],
 })
 export class HomeComponent {
   iconFill = 'currentColor'; // Default to current text color

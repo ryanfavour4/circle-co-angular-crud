@@ -1,0 +1,61 @@
+@use "../../../../../styles.scss" as *;
+
+.our-promise-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  hr {
+    border: 1px solid $light-body-text;
+    opacity: 0.1;
+  }
+}
+
+.our-promise-section {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding-top: 2rem;
+}
+
+.text-section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.3rem;
+  h3 {
+    font-size: 1.6rem;
+    font-weight: 500;
+  }
+
+  p {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.image-section {
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+/* ----------- Tablets and Higher ----------- */
+/* Portrait and Landscape */
+@media only screen and (min-width: 800px) {
+  .our-promise-section {
+    display: flex;
+    flex-direction: row;
+    padding-top: 3rem;
+  }
+
+  .text-section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.3rem;
+    h3 {
+      font-size: 1.9rem;
+      font-weight: 500;
+    }
+  }
+}
