@@ -1,0 +1,17 @@
+<div class="awards">
+  <div class="wrapper awards-wrapper">
+    <app-labeltag labelText="AWARDS"></app-labeltag>
+    <h3>An <b>award winning</b> platform, <b>loved by customers.</b></h3>
+    <div class="awards-lists-box">
+      @for (award of awards; track $index) {
+      <div [className]="award.color" class="award-box">
+        <img [src]="award.image" [alt]="award.title" />
+        <p>
+          {{ award.title }}
+        </p>
+      </div>
+      }
+    </div>
+    <hr />
+  </div>
+</div>

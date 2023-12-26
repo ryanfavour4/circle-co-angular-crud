@@ -1,0 +1,105 @@
+@use "../../../../../styles.scss" as *;
+
+.awards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+.awards-wrapper {
+  h3 {
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-top: 1rem;
+  }
+
+  .awards-lists-box {
+    width: fit-content;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 3rem;
+    padding-bottom: 2.5rem;
+    place-items: center;
+
+    > div {
+      padding: 1rem 0.5rem;
+      aspect-ratio: 1/1;
+      max-width: 200px;
+      max-height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 1rem;
+
+      img {
+        max-width: 4.5rem;
+        height: 5rem;
+        object-fit: contain;
+      }
+      p {
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+.pink-1 {
+  background: $pink-1;
+}
+
+.pink-2 {
+  background: $pink-2;
+}
+
+.pale-lavender {
+  background: $pale-lavender;
+}
+
+.peach {
+  background: $peach;
+}
+
+.teal {
+  background: $teal;
+}
+
+.pink-3 {
+  background: $pink-3;
+}
+
+hr {
+  border: 1px solid $light-body-text;
+  opacity: 0.1;
+}
+
+/* ----------- Tablets and Higher ----------- */
+/* Portrait and Landscape */
+@media only screen and (min-width: 800px) {
+  h3 {
+    font-size: 1.9rem;
+  }
+
+  .awards-wrapper {
+    h3 {
+      font-size: 1.6rem;
+      font-weight: 500;
+      margin-top: 1rem;
+    }
+
+    .awards-lists-box {
+      grid-template-columns: 1fr 1fr 1fr;
+      > div {
+        padding: 1.5rem;
+        img {
+          max-width: 6.5rem;
+          height: 6.5rem;
+        }
+      }
+    }
+  }
+}

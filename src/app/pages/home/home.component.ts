@@ -3,6 +3,7 @@ import { ButtonComponent } from '../../components/button/button.component';
 import { HeroComponent } from './layouts/hero/hero.component';
 import { OurcustomersComponent } from './layouts/ourcustomers/ourcustomers.component';
 import { OurpromiseComponent } from './layouts/ourpromise/ourpromise.component';
+import { AwardsComponent } from './layouts/awards/awards.component';
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -13,6 +14,7 @@ import { OurpromiseComponent } from './layouts/ourpromise/ourpromise.component';
     HeroComponent,
     OurcustomersComponent,
     OurpromiseComponent,
+    AwardsComponent,
   ],
 })
 export class HomeComponent {
